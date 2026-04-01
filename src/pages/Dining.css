@@ -1,0 +1,217 @@
+/* Restaurant Intro Section */
+.restaurant-intro {
+    background-color: var(--accent-cream);
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+}
+
+.intro-text h2 {
+    font-size: var(--fs-h2);
+    margin-bottom: var(--space-lg);
+}
+
+.intro-text p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.intro-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.intro-feature {
+    text-align: center;
+    padding: var(--space-lg);
+    background-color: var(--text-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.intro-feature h4 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-body);
+    color: var(--primary-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.intro-feature p {
+    color: var(--text-light);
+    font-size: var(--fs-small);
+    margin: 0;
+}
+
+/* Menu Section */
+.menu-section {
+    background-color: var(--accent-white);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+}
+
+.menu-category {
+    background-color: var(--text-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-category h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    color: var(--primary-gold);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--primary-gold);
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.menu-item {
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-xs);
+}
+
+.item-name {
+    font-family: var(--font-heading);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.item-price {
+    font-size: var(--fs-body);
+    font-weight: 600;
+    color: var(--primary-gold);
+}
+
+.item-description {
+    color: var(--text-light);
+    font-size: var(--fs-small);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Reservation Banner */
+.reservation-banner {
+    position: relative;
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    overflow: hidden;
+}
+
+.reservation-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(201, 169, 98, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.reservation-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reservation-content h2 {
+    font-size: var(--fs-h2);
+    color: var(--text-white);
+    margin-bottom: var(--space-lg);
+}
+
+.reservation-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--fs-body);
+    margin-bottom: var(--space-2xl);
+}
+
+.reservation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    justify-content: center;
+}
+
+.reservation-buttons .btn {
+    min-width: 200px;
+}
+
+.reservation-buttons .btn-secondary {
+    color: var(--accent-white);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.reservation-buttons .btn-secondary:hover {
+    background-color: var(--accent-white);
+    color: var(--primary-dark);
+    border-color: var(--accent-white);
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .intro-content {
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .intro-features {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .reservation-buttons {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    .intro-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

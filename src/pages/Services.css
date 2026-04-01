@@ -1,0 +1,180 @@
+/* Featured Services Section */
+.featured-services-section {
+    background-color: var(--accent-cream);
+}
+
+.featured-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+}
+
+.featured-service-card {
+    background-color: var(--text-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.featured-service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.featured-service-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: var(--space-lg);
+}
+
+.featured-service-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    color: var(--primary-dark);
+    margin-bottom: var(--space-md);
+}
+
+.featured-service-description {
+    color: var(--text-light);
+    font-size: var(--fs-body);
+    margin-bottom: var(--space-lg);
+    line-height: 1.7;
+}
+
+.featured-service-features {
+    margin-bottom: var(--space-xl);
+}
+
+.featured-service-features li {
+    color: var(--text-dark);
+    font-size: var(--fs-small);
+    padding: var(--space-sm) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.check-icon {
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: var(--fs-body);
+}
+
+.featured-service-pricing {
+    color: var(--primary-gold);
+    font-weight: 600;
+    font-size: var(--fs-body);
+    padding: var(--space-md);
+    background-color: rgba(201, 169, 98, 0.1);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+/* Additional Services Section */
+.additional-services-section {
+    background-color: var(--accent-white);
+}
+
+.additional-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.additional-service-card {
+    background-color: var(--text-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.additional-service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.additional-service-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.additional-service-card h4 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
+    color: var(--primary-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.additional-service-card p {
+    color: var(--text-light);
+    font-size: var(--fs-small);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Service Banner Section */
+.service-banner-section {
+    position: relative;
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    overflow: hidden;
+}
+
+.service-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(201, 169, 98, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.service-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-banner-content h2 {
+    font-size: var(--fs-h2);
+    color: var(--text-white);
+    margin-bottom: var(--space-lg);
+}
+
+.service-banner-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--fs-body);
+    margin-bottom: var(--space-2xl);
+}
+
+.service-banner-content .btn {
+    min-width: 200px;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .featured-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .additional-services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .featured-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}

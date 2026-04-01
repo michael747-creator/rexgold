@@ -1,0 +1,190 @@
+/* Page Header */
+.page-header {
+    position: relative;
+    padding: var(--space-4xl) 0 var(--space-2xl);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    text-align: center;
+}
+
+.page-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(201, 169, 98, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    color: var(--text-white);
+    font-size: var(--fs-h1);
+    margin-bottom: var(--space-md);
+}
+
+.page-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--fs-body);
+    margin: 0;
+}
+
+/* Booking Section */
+.booking-section {
+    background-color: var(--accent-cream);
+}
+
+.booking-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.booking-form {
+    background-color: var(--text-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: var(--space-lg);
+    font-size: var(--fs-body);
+}
+
+.form-success {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: var(--radius-md);
+    color: #2e7d32;
+    text-align: center;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    background-color: var(--accent-white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+}
+
+.contact-card {
+    text-align: center;
+    padding: var(--space-xl);
+    background-color: var(--text-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.contact-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
+    color: var(--primary-dark);
+    margin-bottom: var(--space-md);
+}
+
+.contact-card p {
+    color: var(--text-light);
+    font-size: var(--fs-small);
+    margin-bottom: var(--space-xs);
+}
+
+/* Map Section */
+.map-section {
+    background-color: var(--accent-cream);
+}
+
+.map-placeholder {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-content {
+    text-align: center;
+    padding: var(--space-2xl);
+}
+
+.map-content h3 {
+    color: var(--text-white);
+    font-size: var(--fs-h3);
+    margin-bottom: var(--space-md);
+}
+
+.map-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--space-lg);
+}
+
+.map-content .btn-secondary {
+    color: var(--accent-white);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.map-content .btn-secondary:hover {
+    background-color: var(--accent-white);
+    color: var(--primary-dark);
+    border-color: var(--accent-white);
+}
+
+/* Desktop Styles */
+@media (min-width: 576px) {
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .contact-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .booking-form {
+        padding: var(--space-3xl);
+    }
+}

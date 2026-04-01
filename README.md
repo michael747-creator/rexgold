@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# Rexgold Hotel Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive hotel website built with React for Rexgold Hotel & Suites. The website showcases all hotel services including accommodation, restaurant, bar, lounge, club, laundry, and free WiFi.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **React Router**: Client-side routing for smooth navigation
+- **Modern UI/UX**: Elegant design with gold and navy color scheme
+- **Booking System**: Reservation form for room bookings
+- **Service Pages**: Dedicated pages for each hotel service
+- **Contact Form**: Easy way for guests to get in touch
 
-### `npm start`
+## Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Home** - Hero section, services overview, and call-to-action
+2. **Accommodation** - Room types, pricing, and booking
+3. **Restaurant** - Menu highlights and table reservations
+4. **Bar** - Cocktail menu and happy hour information
+5. **Lounge** - Relaxation space and light refreshments
+6. **Club** - Events schedule and VIP booking
+7. **Services** - Laundry, WiFi, and other amenities
+8. **Contact** - Booking form, contact info, and location
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **React 19** - UI library
+- **React Router DOM** - Client-side routing
+- **CSS3** - Custom styling with CSS variables
+- **Google Fonts** - Playfair Display & Poppins
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14 or higher)
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd rexgold
+```
 
-### `npm run eject`
+2. Install dependencies:
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the development server:
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app will be available at `http://localhost:3000` (or the next available port).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Build for Production
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run build
+```
 
-## Learn More
+The optimized production build will be in the `build/` folder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+rexgold/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Header.css
+│   │   ├── Footer.jsx
+│   │   ├── Footer.css
+│   │   ├── Hero.jsx
+│   │   └── Hero.css
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Home.css
+│   │   ├── Accommodation.jsx
+│   │   ├── Accommodation.css
+│   │   ├── Restaurant.jsx
+│   │   ├── Bar.jsx
+│   │   ├── Lounge.jsx
+│   │   ├── Club.jsx
+│   │   ├── Club.css
+│   │   ├── Services.jsx
+│   │   ├── Services.css
+│   │   ├── Contact.jsx
+│   │   ├── Contact.css
+│   │   └── Dining.css
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+└── package.json
+```
 
-### Code Splitting
+## Design System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Colors
+- **Primary Gold**: #c9a962
+- **Primary Dark**: #1a1a2e
+- **Primary Navy**: #16213e
+- **Secondary Dark**: #0f3460
+- **Accent Cream**: #faf8f5
 
-### Analyzing the Bundle Size
+### Typography
+- **Headings**: Playfair Display (serif)
+- **Body**: Poppins (sans-serif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Services Highlighted
 
-### Making a Progressive Web App
+- **Accommodation** - Luxury rooms and suites
+- **Restaurant** - Fine dining experience
+- **Bar** - Premium cocktails and spirits
+- **Lounge** - Elegant relaxation space
+- **Club** - Vibrant nightlife
+- **Laundry** - Professional cleaning service
+- **Free WiFi** - High-speed internet throughout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact Information
 
-### Advanced Configuration
+- **Address**: 123 Luxury Avenue, Premium District, Metropolitan City, MC 10001
+- **Phone**: +1 (555) 123-4567
+- **Email**: info@rexgoldhotel.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
+This project is proprietary and confidential.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ using React

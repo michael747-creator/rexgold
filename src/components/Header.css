@@ -1,0 +1,215 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: all var(--transition-normal);
+    padding: var(--space-lg) 0;
+}
+
+.header-scrolled {
+    background-color: var(--primary-dark);
+    padding: var(--space-md) 0;
+    box-shadow: var(--shadow-md);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-gold);
+    line-height: 1;
+    letter-spacing: 2px;
+    transition: color var(--transition-fast);
+}
+
+.logo-subtitle {
+    font-size: var(--fs-xs);
+    font-weight: 400;
+    color: var(--accent-white);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: color var(--transition-fast);
+}
+
+.header-scrolled .logo-text {
+    color: var(--primary-gold);
+}
+
+.header-scrolled .logo-subtitle {
+    color: var(--accent-gold-light);
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--primary-dark);
+    padding: var(--space-4xl) var(--space-xl);
+    transition: right var(--transition-slow);
+    overflow-y: auto;
+}
+
+.nav-open {
+    right: 0;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.nav-item {
+    border-bottom: 1px solid rgba(201, 169, 98, 0.2);
+    padding-bottom: var(--space-sm);
+}
+
+.nav-link {
+    display: block;
+    padding: var(--space-md) 0;
+    color: var(--accent-white);
+    font-size: var(--fs-body);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-gold);
+    padding-left: var(--space-md);
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-gold);
+    transition: all var(--transition-normal);
+}
+
+.hamburger-open .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-open .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Overlay */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    z-index: 999;
+}
+
+.nav-overlay-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+    .nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        overflow-y: visible;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        gap: var(--space-xl);
+    }
+
+    .nav-item {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .nav-link {
+        padding: var(--space-sm) 0;
+        font-size: var(--fs-small);
+        color: var(--accent-white);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--primary-gold);
+        padding-left: 0;
+    }
+
+    .header-scrolled .nav-link {
+        color: var(--accent-white);
+    }
+
+    .header-scrolled .nav-link:hover,
+    .header-scrolled .nav-link.active {
+        color: var(--primary-gold);
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .header-actions {
+        gap: var(--space-lg);
+    }
+}
