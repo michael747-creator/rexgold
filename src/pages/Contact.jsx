@@ -24,9 +24,33 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulate form submission
+
+        // Build WhatsApp message
+        const whatsappMessage = `*New Reservation Request*\n\n` +
+            `*Name:* ${formData.name}\n` +
+            `*Email:* ${formData.email}\n` +
+            `${formData.phone ? `*Phone:* ${formData.phone}\n` : ''}` +
+            `*Check-in:* ${formData.checkIn}\n` +
+            `*Check-out:* ${formData.checkOut}\n` +
+            `*Guests:* ${formData.guests}\n` +
+            `*Room Type:* ${formData.roomType}\n` +
+            `${formData.message ? `\n*Special Requests:* ${formData.message}` : ''}`;
+
+        // Encode the message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+
+        // WhatsApp phone number (replace with your hotel's WhatsApp number)
+        const whatsappNumber = '15551234567'; // Format: country code + number (e.g., 1 for US)
+
+        // Redirect to WhatsApp
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        window.open(whatsappUrl, '_blank');
+
+        // Show success message
         setFormStatus('success');
         setTimeout(() => setFormStatus(''), 3000);
+
+        // Reset form
         setFormData({
             name: '',
             email: '',

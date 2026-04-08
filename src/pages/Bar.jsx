@@ -1,4 +1,5 @@
 import './Dining.css';
+import barBg from '../assets/WhatsApp Image 2026-04-01 at 9.34.42 AM.jpeg';
 
 function Bar() {
     const cocktails = [
@@ -37,7 +38,7 @@ function Bar() {
 
     return (
         <main className="dining-page">
-            <section className="page-header">
+            <section className="page-header bar-header" style={{ backgroundImage: `url(${barBg})` }}>
                 <div className="page-header-overlay"></div>
                 <div className="container">
                     <h1>The Rexgold Bar</h1>

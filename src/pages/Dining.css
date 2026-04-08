@@ -1,3 +1,10 @@
+/* Bar Header with Background Image */
+.bar-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Restaurant Intro Section */
 .restaurant-intro {
     background-color: var(--accent-cream);
